@@ -12,21 +12,21 @@ const targetChannelId = "-4050602453"; // Replace with your channel username or 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, "Hello! I am your Telegram bot.");
-  bot.sendMessage(chatId, "Please tell me your name:");
+  bot.sendMessage(chatId, "Salom! Creatit Webinar botga Xush kelibsiz.");
+  bot.sendMessage(chatId, "Ismingiz:");
 
   bot.once("message", (nameMsg) => {
     const name = nameMsg.text;
 
     bot.sendMessage(
       chatId,
-      `Nice to meet you, ${name}! Please share your contact information:`,
+      `Tanishganimdan xursandman, ${name}! Telefon raqamingizni jo'nating:`,
       {
         reply_markup: {
           keyboard: [
             [
               {
-                text: "Share Contact",
+                text: "Telefon raqamni jo'natish",
                 request_contact: true,
               },
             ],
@@ -41,7 +41,7 @@ bot.onText(/\/start/, (msg) => {
 
       bot.sendMessage(
         chatId,
-        `Thank you for sharing your contact! Your phone number is ${phoneNumber}.`
+        `Ro'yxatdan o'tganingiz uchun rahmat! Tez orada siz bilan bog'lanamiz.`
       );
 
       // Send user information to another channel
