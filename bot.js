@@ -7,7 +7,7 @@ const token = "6532809661:AAHthmybbaO-Tdy_aRIq7u3WILtw3JOfwxY";
 const bot = new TelegramBot(token, { polling: true });
 
 // Define the target channel ID where you want to send the user information
-const targetChannelId = "-4055440967"; // Replace with your channel username or IDd
+const targetChannelId = "4050602453"; // Replace with your channel username or IDd
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
